@@ -6,7 +6,7 @@ solution = File.open('solution.txt', 'w')
 # 不同長度，短的供測試，長的測時間
 lengths = [5, 10, 50, 100, 1000, 10000, 65535]
 lengths.each do |length|
-  unsorted = (0..length).map {rand(65536)}
+  unsorted = (0..length-1).map {rand(65536)}
   testdata.puts unsorted.join(' ')
   sorted = unsorted.sort
   solution.puts sorted.join(' ')

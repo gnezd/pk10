@@ -12,7 +12,7 @@ points = 100
 noise_level = 0.1
 
 data_a.puts "# y = #{a} x + #{b}"
-(0..points).each do |point|
+(0..points-1).each do |point|
   x = point.to_f/points
   y = a * x + b + noise_level*(rand()-0.5)
   data_a.puts "#{x} #{y}"

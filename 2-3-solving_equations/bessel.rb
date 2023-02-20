@@ -14,7 +14,7 @@ end
 # Now output J_1(x) from 0~20
 sampling_rate = 10000
 fout = File.open('J_1_0-20.txt', 'w')
-(0..20*sampling_rate).each do |pt|
+(0..20*sampling_rate-1).each do |pt|
   x = pt.to_f/sampling_rate
   fout.puts "#{x} #{j(x, 1, 50)}"
 end
